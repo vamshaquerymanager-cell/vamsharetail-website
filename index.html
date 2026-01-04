@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VamshaRetail</title>
+  <link rel="icon" type="image/png" href="/logo.png" />
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+ 
+
+</head>
+<body class="font-sans text-gray-800">
+
+
+<header class="fixed top-0 w-full bg-white shadow z-50">
+    <img
+    src="banner.png"
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+  <div class="relative max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center space-x-2">
+        <img src="logo.png" alt="Logo" class="h-8" />
+        <span class="font-bold text-lg">Vamsha Retail</span>
+      </div>
+
+      
+      <nav class="hidden md:flex space-x-6">
+        <div class="relative group">
+          <button class="font-medium hover:text-blue-600">Home</button>          
+        </div>
+        <div class="relative group">
+          <button class="font-medium hover:text-blue-600">About</button>
+          <div class="absolute hidden group-hover:block bg-white shadow rounded mt-2 w-40">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Mission</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Vission</a>
+          </div>
+        </div>       
+        <div class="relative group">
+          <button class="font-medium hover:text-blue-600">Branches</button>
+          <div class="absolute hidden group-hover:block bg-white shadow rounded mt-2 w-40">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Thiruvarur</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Mayiladuthurai</a>
+          </div>
+        </div>       
+        <div class="relative group">
+          <button class="font-medium hover:text-blue-600">Categories</button>
+          <div class="absolute hidden group-hover:block bg-white shadow rounded mt-2 w-50">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Men's collections</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-nowrap">Woman's collections</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Conbo collections</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kid's collections</a>
+          </div>
+        </div>  
+           <div class="relative group">
+          <button class="font-medium hover:text-blue-600">News & Media</button>          
+        </div>     
+     
+      </nav>
+
+      
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow">
+    <a href="#" class="block px-4 py-3 border-b">Home</a>
+    <a href="#about" class="block px-4 py-3 border-b">About Us</a>
+    <a href="#contact" class="block px-4 py-3">Contact</a>
+  </div>
+</header>
+
+
+<section class="w-full relative">
+    <video 
+        id="heroVideo"
+        src="videoplayback.mp4"
+        class="w-full h-auto"
+        autoplay
+        muted
+        loop
+        playsinline>
+    </video>
+
+    
+    <button
+        onclick="togglePlay()"
+        class="absolute inset-0 flex items-center justify-center">
+        <span 
+            id="playIcon"
+            class=" text-white text-4xl px-6 py-4 rounded-full ">
+            ⏸
+        </span>
+    </button>
+
+    
+    <button
+        onclick="toggleVolume()"
+        class="absolute bottom-5 right-5  text-white text-xl px-4 py-2 rounded-full ">
+        <span id="volumeIcon">🔇</span>
+    </button>
+</section>
+
+<main class="bg-gray-100 py-12 px-4">
+    <h1 class="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
+        Explore Our Branches
+    </h1>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 group">
+            <img 
+                src="TVR.jfif" 
+                alt="TVR Branch"
+                class="w-full h-60 object-cover group-hover:scale-105 transition duration-300">
+
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                    TVR Branch
+                </h2>
+
+                <p class="text-gray-600 mb-4">
+                    Premium showroom offering exclusive collections with excellent customer service.
+                </p>
+
+                <div class="text-sm text-gray-700 space-y-1">
+                    <p><strong>📍 Location:</strong> Thiruvarur</p>
+                    <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+                    <p><strong>✉ Email:</strong> tvr@vamsha.com</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 group">
+            <img 
+                src="mv.jfif" 
+                alt="MV Branch"
+                class="w-full h-60 object-cover group-hover:scale-105 transition duration-300">
+
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                    MV Branch
+                </h2>
+
+                <p class="text-gray-600 mb-4">
+                    Wide range of products with modern designs and competitive pricing.
+                </p>
+
+                <div class="text-sm text-gray-700 space-y-1">
+                    <p><strong>📍 Location:</strong> Mayiladuthurai</p>
+                    <p><strong>📞 Phone:</strong> +91 91234 56789</p>
+                    <p><strong>✉ Email:</strong> mv@vamsha.com</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+<footer class="relative text-white">
+    
+    <img
+        src="banner.png"
+        alt="Footer Background"
+        class="absolute inset-0 w-full h-full object-cover"
+    />
+
+    
+    <div class="relative bg-black/30">
+        
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+            
+            <div>
+                <img src="logo.png" class="h-20 w-20 rounded mb-4" alt="VamshaRetail Logo">
+                <p class="text-sm text-gray-200 leading-relaxed">
+                    VamshaRetail Private Ventures is a customer-focused retail company offering quality products across multiple branches.
+                </p>
+            </div>
+
+            
+            <div>
+                <h3 class="font-semibold text-lg mb-4">Menu</h3>
+                <ul class="space-y-2 text-sm text-gray-200">
+                    <li class="hover:text-white cursor-pointer">Home</li>
+                    <li class="hover:text-white cursor-pointer">Brand</li>
+                    <li class="hover:text-white cursor-pointer">Our Business</li>
+                    <li class="hover:text-white cursor-pointer">Mission, Vision & Values</li>
+                    <li class="hover:text-white cursor-pointer">Categories</li>
+                    <li class="hover:text-white cursor-pointer">News & Media</li>
+                </ul>
+            </div>
+
+            
+            <div>
+                <h3 class="font-semibold text-lg mb-4">Branches</h3>
+                <ul class="space-y-2 text-sm text-gray-200">
+                    <li>Thiruvarur</li>
+                    <li>Mayiladuthurai</li>
+                </ul>
+            </div>
+
+            
+            <div>
+                <h3 class="font-semibold text-lg mb-4">Reach Us</h3>
+                <div class="space-y-2 text-sm text-gray-200">
+                    <p>📩 vamsharetail@gmail.com</p>
+                    <p>📞 +91 90925 27540</p>
+                </div>
+
+                <h3 class="font-semibold text-lg mt-6 mb-3">Find Us</h3>
+                <div class="space-y-2 text-sm">
+                    <a href="#" class="block hover:text-white">📍 Thiruvarur Address</a>
+                    <a href="#" class="block hover:text-white">📍 Mayiladuthurai Address</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="border-t border-white/20 px-6 py-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-200 gap-3">
+            <div>
+                © 2026 VamshaRetail. All rights reserved.
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <span>⭐</span>
+                <a href="#" class="hover:text-white">Exchange Policy</a>
+                <span>⭐</span>
+                <a href="#" class="hover:text-white">Terms of Use</a>
+                <span>⭐</span>
+                <span>VamshaRetail</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+    const video = document.getElementById("heroVideo");
+    const playIcon = document.getElementById("playIcon");
+    const volumeIcon = document.getElementById("volumeIcon");
+
+    function togglePlay() {
+        if (video.paused) {
+            video.play();
+            playIcon.textContent = "⏸";
+        } else {
+            video.pause();
+            playIcon.textContent = "▶";
+        }
+    }
+
+    function toggleVolume() {
+        video.muted = !video.muted;
+        volumeIcon.textContent = video.muted ? "🔇" : "🔊";
+    }
+
+</script>
+
+</body>
+</html>
